@@ -1,0 +1,69 @@
+{
+	"companies" : [		
+		{
+			"id": 1,
+			"name": "TCS",
+			"address": "Ambattur"		
+		},
+		{
+			"id": 2,
+			"name": "CTS",
+			"address": "Sholinganallur"
+		},
+		{
+			"id": 3,
+			"name": "Infosys",
+			"address": "Mysore"
+		},
+		{
+			"id": 4,
+			"name": "Zoho",
+			"address": "Chengalpattu"
+		},
+		{
+			"id": 5,
+			"name": "HP",
+			"address": "Guindy"
+		},
+		{
+			"id": 6,
+			"name": "CSS corp",
+			"address": "Ambattur"
+		},
+		{
+			"id": 7,
+			"name": "Ziffity",
+			"address": "Little Mount"
+		},
+		{
+			"id": 8,
+			"name": "Accenture",
+			"address": "Sholinganallur"
+		},
+		{
+			"id": 9,
+			"name": "Capgemini",
+			"address": "Karapakkam"
+		},
+		{
+			"id": 10,
+			"name": "Tech Mahindra",
+			"address": "Pune"
+		},
+		{
+			"id": 11,
+			"name": "MindTree",
+			"address": "Tharamani"
+		},
+		{
+			"id": 12,
+			"name": "Oracle",
+			"address": "Texas"
+		},
+		{
+			"id": 13,
+			"name": "OFS",
+			"address": "Tharamani"
+		}
+	]
+}

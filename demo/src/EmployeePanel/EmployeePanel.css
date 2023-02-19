@@ -1,0 +1,8 @@
+.employee {    
+    display: block;
+    position: relative;
+    border: 1px outset;    
+    float: right;
+    width: 100%;
+    height: 798px;
+}

@@ -1,0 +1,10 @@
+.primary {
+  background-color: #2fcb53;
+  border-color: #2fcb53;
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: #48dd84;
+  border-color: #48dd84;
+}

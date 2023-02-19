@@ -1,0 +1,11 @@
+.rightSide {
+    display: block;
+    position: relative;
+    border: 1px outset;
+    border-bottom-color: black;
+    border-top-color: black;    
+    border-left-color: black;
+    float: right;
+    width: 79.75%;
+    height: 798px;
+}

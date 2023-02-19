@@ -1,0 +1,87 @@
+.grid {              
+    width: 100%;    
+}
+
+.table {
+    display: block;
+    /* overflow-y: scroll; */
+    border-top: 1px;
+    border-right: 1px;
+    /* border: 1px solid #000; */
+    height: 300px;                
+    margin-top: 70px;
+    margin-left: 75px;
+    margin-right: 75px;
+    
+}
+
+.gridButton {
+    /* border: 1px solid #000; */
+    height: 50px;
+    margin-left: 75px;
+    margin-right: 75px;    
+}
+
+.header {    
+    height: 10%;        
+}
+
+.content {
+    border: 1px solid #000;
+    height: 90%;    
+    overflow-y: scroll;
+}
+
+.rowHeader {
+    border: 1px solid #000;    
+    display: inline-block;
+    padding-top: 3px;        
+    height: 100%;
+    width: 24.83%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;        
+    background-color: #7395ae;    
+    color: #fff;    
+    text-align: center;
+}
+
+.rowContent {    
+    height: 10%;
+}
+
+.id, .name, .address, .button {    
+    border: 1px solid #000;
+    display: inline-block;
+    padding-top: 3px;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;        
+    background-color: #cafafe;    
+    color: #000;    
+    text-align: center;
+}
+
+.id, .name, .address {
+    width: 25.22%;
+}
+
+.button {
+    width: 23.67%;        
+}
+
+.deleteButton {
+    background-color: #501b1d;
+    color: #fff;
+    cursor: pointer;    
+}
+
+.addNewEmployee {
+    background-color: #20bf6b;
+    border: 2% outset;
+    float: right;    
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-top: 20px;
+}
