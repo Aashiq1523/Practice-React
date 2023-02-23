@@ -12,15 +12,17 @@ const App = () => {
     ]
   });
 
+  const [showPerson, setShowPerson] = useState(false);
+
   // manipulating state
-  const expandNameHandler = () => {
-    setPerson({
-      persons: [
-        { name: 'Mohamed Aashiq', age: '26'},
-        { name: 'Soffi Ashraf', age: '23'}
-      ]
-    });
-  };
+  // const expandNameHandler = () => {
+  //   setPerson({
+  //     persons: [
+  //       { name: 'Mohamed Aashiq', age: '26'},
+  //       { name: 'Soffi Ashraf', age: '23'}
+  //     ]
+  //   });
+  // };
 
   // Two-way binding
   const nameChangeHandler = (event) => {
@@ -30,6 +32,10 @@ const App = () => {
         { name: 'Soffi Ashraf', age: '23'}
       ]
     });
+  };
+
+  const togglePersonHandler = () => {
+    setShowPerson(!showPerson);
   };
 
   // Inline style
@@ -45,9 +51,23 @@ const App = () => {
   return (
     <div className="App">
       <h1>Hello, This is using JSX</h1>
-      <Person name={person.persons[0].name} age={person.persons[0].age} change={nameChangeHandler}/>
-      <Person name={person.persons[1].name} age={person.persons[1].age}>I am an Optom</Person>
-      <button style={style} onClick={expandNameHandler}>ExpandName</button>
+
+      {/* Rendering Content Conditionally */
+        showPerson ?
+        <div>
+          <Person
+            name={person.persons[0].name}
+            age={person.persons[0].age}
+            change={nameChangeHandler}
+            />
+          <Person 
+            name={person.persons[1].name}
+            age={person.persons[1].age}>
+              I am an Optom
+          </Person>
+        </div> : null
+      }
+      <button style={style} onClick={togglePersonHandler}>Show Persons</button>
     </div>
   );
 }
