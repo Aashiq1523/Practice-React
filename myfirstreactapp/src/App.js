@@ -20,7 +20,7 @@ const App = () => {
         { name: 'Soffi Ashraf', age: '23'}
       ]
     });
-  }
+  };
 
   // Two-way binding
   const nameChangeHandler = (event) => {
@@ -30,6 +30,16 @@ const App = () => {
         { name: 'Soffi Ashraf', age: '23'}
       ]
     });
+  };
+
+  // Inline style
+  const style = {
+    backgroundColor: 'white',
+    font: 'inherit',
+    border: '1px solid blue',
+    padding: '8px',
+    cursor: 'ponter',
+    margin: '8px'
   }
 
   return (
@@ -37,7 +47,7 @@ const App = () => {
       <h1>Hello, This is using JSX</h1>
       <Person name={person.persons[0].name} age={person.persons[0].age} change={nameChangeHandler}/>
       <Person name={person.persons[1].name} age={person.persons[1].age}>I am an Optom</Person>
-      <button onClick={expandNameHandler}>ExpandName</button>
+      <button style={style} onClick={expandNameHandler}>ExpandName</button>
     </div>
   );
 }
