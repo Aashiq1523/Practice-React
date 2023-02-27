@@ -5,38 +5,22 @@ import Person from './Person/Person';
 const App = () => {
 
   // state
-  const [person, setPerson] = useState({
-    persons: [
-      { name: 'Aashiq', age: '26'},
-      { name: 'Soffi', age: '23'}
-    ]
-  });
+  const [personArray, setPersonArray] = useState([
+      { id: 1, name: 'Aashiq', age: '26'},
+      { id: 2, name: 'Soffi', age: '23'}
+    ]);
 
   const [showPerson, setShowPerson] = useState(false);
-
-  // manipulating state
-  // const expandNameHandler = () => {
-  //   setPerson({
-  //     persons: [
-  //       { name: 'Mohamed Aashiq', age: '26'},
-  //       { name: 'Soffi Ashraf', age: '23'}
-  //     ]
-  //   });
-  // };
-
-  // Two-way binding
-  const nameChangeHandler = (event) => {
-    setPerson({
-      persons: [
-        { name: event.target.value, age: '26'},
-        { name: 'Soffi Ashraf', age: '23'}
-      ]
-    });
-  };
 
   const togglePersonHandler = () => {
     setShowPerson(!showPerson);
   };
+
+  const deletePersonHandler = (index) => {
+    const persons = [...personArray];
+    persons.splice(index, 1);
+    setPersonArray(persons);
+  }
 
   // Inline style
   const style = {
@@ -54,16 +38,16 @@ const App = () => {
   if (showPerson) {
     persons = (
       <div>
-        <Person
-          name={person.persons[0].name}
-          age={person.persons[0].age}
-          change={nameChangeHandler}
-          />
-        <Person 
-          name={person.persons[1].name}
-          age={person.persons[1].age}>
-            I am an Optom
-        </Person>
+        {personArray.map((person, index) => {
+          return (
+            <Person
+              name={person.name}
+              age={person.age}
+              click={deletePersonHandler.bind(this, index)}
+              key={person.id}
+            />
+          )
+        })}
       </div>
     );
   }
